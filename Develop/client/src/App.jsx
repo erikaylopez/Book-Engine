@@ -1,9 +1,13 @@
 import './App.css';
-import { ApolloProvider } from '@apollo/client';
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import { Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import { client } from '@apollo/react-hooks';
 
+
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
 function App() {
   return (
     <ApolloProvider client={client}>
@@ -14,4 +18,3 @@ function App() {
 }
 
 export default App;
-
