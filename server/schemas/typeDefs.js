@@ -1,5 +1,3 @@
-const { gql } = require('@apollo/client');
-
 const typeDefs = gql`
 
 type Book {
