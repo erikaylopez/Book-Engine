@@ -16,9 +16,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/dist')));
 
   // Import Apollo Server
-  app.use('/graphql', expressMiddleware(server, {
-    context: authMiddleware
-  }));
+  app.use('/graphql', expressMiddleware(server));
   // Import typeDefs and resolvers
 
 
