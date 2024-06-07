@@ -1,5 +1,5 @@
 // use this to decode a token and get the user's information out of it
-import decode from "/node_modules/.vite/deps/jwt-decode.js?v=42865a76";
+import decode from "jwt-decode";
 
 // create a new class to instantiate for a user
 class AuthService {
