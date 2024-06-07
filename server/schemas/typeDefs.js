@@ -1,4 +1,4 @@
-const typeDefs = gql`
+const typeDefs = `
 
 type Book {
     _id: ID!
